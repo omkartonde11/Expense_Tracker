@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Expense</title>
+</head>
+<body>
+    <h1>Add Expense</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.category.label }}<br>
+            {{ form.category(size=32) }}<br>
+            {{ form.category.errors }}
+        </div>
+        <div>
+            {{ form.amount.label }}<br>
+            {{ form.amount() }}<br>
+            {{ form.amount.errors }}
+        </div>
+        <div>
+            {{ form.comments.label }}<br>
+            {{ form.comments(rows=3) }}<br>
+            {{ form.comments.errors }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+</html>
